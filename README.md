@@ -72,8 +72,8 @@ The steps, including creating a cluster, create and load tables, testing, were p
    3. **Create IAM role** and **Red shift cluster** with pre-defined DWH parameters in `dwh.cfg`
    4. Copy the `DWH_ENTPONT` and  `IAM_ROLE` displayed to `dwh.cfg`
    5. Connect the cluster with command line `sql tool`
-3. Run `create_table.py` (*no modification is needed*) to **create empty tables**
-4. Run `copy_data_insert_tables.py` (no modification is needed) to **1) copy data from S3 to staging 2) insert data from staging to tables**
+3. Run `create_table.py` to **create empty tables**
+4. Run `etl.py` (no modification is needed) to **1) copy data from S3 to staging 2) insert data from staging to tables**
 5. **Test** the created tables with `sql` command
 6. **Clean up** resources by deleting the cluster and IAM role
 
@@ -81,8 +81,8 @@ The steps, including creating a cluster, create and load tables, testing, were p
 
 * `etl.ipynb`
 * `sql_queries.py`
-* `create_tables.py` (identical to `create_tables.py` template)
-* `copy_data_insert_tables.py` (identical to `etl.py` template)
+* `create_tables.py`  (*no modification is needed*)
+* `etl.py` (*no modification is needed*)
 * `sample_dwh.cfg` is a copy of `dwh.cfg` without  **key and secret**, becuase they ought NOT to be accessible to the public
 
 ## Test 
